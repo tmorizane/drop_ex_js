@@ -20,3 +20,7 @@ Codes for drag-and-drop operation, reading an Excel file, identifying the data r
 meta_an2 function: From the formatted data, doing meta-analysis. Calculating RR, OR, RD, HR, MD, and MSD and their variances for individual studies, calculating summary estimate and variances, calculating variance of the summary estimate (tau2) by REML method, %weight, 95% confidence intervals, creating a forest plot and a funnel plot on the canvas object.
 ### meta_an2_pi.js file
 meta_an_pi2 function: doing the same operations as meta_an2, but adding prediction interval, numerical data are put in the text area, not creating a funnel plot.
+
+The next are JavaScript libraries I used. Thanks to the authors.
+jStat https://github.com/jstat/jstat.git  
+Math.js https://mathjs.org/ 
