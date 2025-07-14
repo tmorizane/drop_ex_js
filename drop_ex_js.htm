@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+	<meta name="author" content="Toshio Morizane MD & PhD">
+	<meta name="copyright" content="Toshio Morizane">
+	<meta name="date" content="July 14, 2025">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reformat & Do Meta-analysis</title>
+    <style>
+	#header{position:absolute;left:7px;height:40px;width:720px;top:4px;}
+	#izlogo{position:relative;left:4px;height:38px;width:38px;top:1px;float:left;margin:solid 2px #cccccc;}
+	#ma{position:relative;left:25px;top:-16px;}
+        #drop-area {
+			position:absolute;
+            border: 2px dashed #cccccc;
+			top:46px;
+			left:740px !important;;
+            width: 175px;
+            height: 120px;
+            line-height: 24px;
+            text-align: center;
+            margin: 10px;
+			background-color:#ffffff;
+        }
+		#copyresult{position:absolute;left:400px;top:27px;width:160px;height:24px;background-color:#c0c0c0;font-size:1em;border:solid 1px #808080;outline:none;}
+		#copyresult:hover{background-color:#808080;border:solid 1px #c0c0c0;color:#ffffff}
+		#metaresult{position:absolute;top:55px;left:16px;height:118px;width:720px;margin:1px;resize:none;}
+		#sheet-select{position:absolute;top:55px;left:750px;top:27px;width:180px;height:24px;font-size:1em;border:solid 1px;}
+		#process-button{position:absolute;left:562px;top:27px;width:180px;height:24px;font-size:1em;border:solid 1px;}
+		
+		#target{position:relative;width:95px;height:95px;top:-28px;left:2px;opacity:0.4;}
+		#target:hover{width:70px;height:70px;top:-16px}
+		#down{position:absolute;top:35px;}
+		
+    </style>
+<script type="text/javascript" src="https://stat.zanet.biz/js/jquery.min.js"></script>
+<script type="text/javascript" src="https://stat.zanet.biz/js/jquery-ui.min.js"></script>
+<script type="text/JavaScript" src="https://stat.zanet.biz/js/jstat.js"></script>
+<script type="text/JavaScript" src="https://stat.zanet.biz//js/meta-an2-js.js"></script>
+<script type="text/JavaScript" src="https://stat.zanet.biz//js/meta-an2-pi.js"></script>
+<script type="text/JavaScript" src="https://stat.zanet.biz//js/drop_ex_js.js"></script>
+<script type="text/javascript" src="https://stat.zanet.biz/js/xlsx.full.min.js"></script>
+<script>
+</script>
+
+</head>
+<body>
+<div id="header">
+<img src="https://stat.zanet.biz/fig/infozanet_logo.png" id="izlogo">
+<div id="ma"><h4>Excel sheets to Meta-analysis with Prediction Interval: Web tool by JavaScript</h4></div>
+</div>
+
+<div id="down">
+<select id="sheet-select"></select>
+<div id="drop-area">Drag and Drop your Excel .xlsx file here<img src="https://stat.zanet.biz/fig/target.png" id="target"></div>
+<form name="dat" id="maindiv">
+
+<input type="button" id="copyresult" class="excec" onMouseup="copy_dat(1)" value="Copy to Clipboard" title="Copy results in text area to clipboard.">
+<textarea id="metaresult" placeholder="Result data of meta-analysis.">
+</textarea>
+
+</form>	
+<button id="process-button" title="Do meta-analysis from the data in the selected sheet in the drop-down menu.">Do Meta-analysis</button>
+</div>
+
+</body>
+</html>
