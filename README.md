@@ -13,3 +13,10 @@ A web page "Excel sheets to Meta-analysis with Prediction Interval: Web tool by 
 6. At this moment, effect estimates and 95% conidence intervals, the summary estimate and 95% confidence interval, and prediction interval data are stored in the clipboard. Then you can paste them in Excel sheet.  
 7. The result numerical data in the text area can be copied in clipboard by clicking Copy to Clipboard button.  
 You can choose another sheet name and do meta-analysis one by one.
+# JavaScript codes
+### drop_ex_js.js file
+Codes for drag-and-drop operation, reading an Excel file, identifying the data range, study ID, comparator, intervention, outcome, the type of effect measure, and making JASON text separated by tab and return. The formatted texts are put in the text area, and in the clipboard too.
+### meta_an2_js.js file
+meta_an2 function: From the formatted data, doing meta-analysis. Calculating RR, OR, RD, HR, MD, and MSD and their variances for individual studies, calculating summary estimate and variances, calculating variance of the summary estimate (tau2) by REML method, %weight, 95% confidence intervals, creating a forest plot and a funnel plot on the canvas object.
+### meta_an2_pi.js file
+meta_an_pi2 function: doing the same operations as meta_an2, but adding prediction interval, numerical data are put in the text area, not creating a funnel plot.
