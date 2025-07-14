@@ -21,6 +21,6 @@ meta_an2 function: From the formatted data, doing meta-analysis. Calculating RR,
 ### meta_an2_pi.js file
 meta_an_pi2 function: doing the same operations as meta_an2, but adding prediction interval, numerical data are put in the text area, not creating a funnel plot.
 
-The next are JavaScript libraries I used. Thanks to the authors.
+The next are JavaScript libraries I used. Thanks to the authors. Without these libraries drop_ex_js would not be here.  
 jStat https://github.com/jstat/jstat.git  
 Math.js https://mathjs.org/ 
